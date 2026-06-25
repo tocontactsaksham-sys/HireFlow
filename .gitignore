@@ -1,0 +1,34 @@
+# Java build files
+target/
+*.class
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+application-secret.yml
+
+# Uploaded resumes
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db

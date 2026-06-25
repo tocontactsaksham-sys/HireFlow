@@ -1,0 +1,7 @@
+spring:
+ profiles:
+  active: dev
+
+jwt:
+ access-expiration: 900000
+ refresh-expiration: 604800000
