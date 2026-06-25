@@ -1,11 +1,217 @@
-<project>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="
+ http://maven.apache.org/POM/4.0.0
+ https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 <modelVersion>4.0.0</modelVersion>
+
+
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.3.5</version>
+</parent>
+
+
 <groupId>com.hireflow</groupId>
 <artifactId>hireflow</artifactId>
+
 <version>1.0.0</version>
-<properties><java.version>21</java.version></properties>
-<!-- Spring Boot 3.3 dependencies:
-security, jpa, validation, mail, postgresql, h2,
-flyway, caffeine, lombok, mapstruct, jjwt,
-springdoc-openapi, testcontainers -->
+
+<name>HireFlow</name>
+
+
+<properties>
+
+    <java.version>21</java.version>
+    <mapstruct.version>1.6.3</mapstruct.version>
+
+</properties>
+
+
+<dependencies>
+
+
+<!-- WEB -->
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+
+<!-- SECURITY -->
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+
+<!-- JPA -->
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+
+<!-- VALIDATION -->
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+
+
+<!-- DATABASE -->
+
+
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+</dependency>
+
+
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+
+<!-- FLYWAY -->
+
+<dependency>
+
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-core</artifactId>
+
+</dependency>
+
+
+<!-- CACHE -->
+
+<dependency>
+
+<groupId>com.github.ben-manes.caffeine</groupId>
+<artifactId>caffeine</artifactId>
+
+</dependency>
+
+
+<!-- MAIL -->
+
+
+<dependency>
+
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-mail</artifactId>
+
+</dependency>
+
+
+<!-- JWT -->
+
+
+<dependency>
+<groupId>io.jsonwebtoken</groupId>
+<artifactId>jjwt-api</artifactId>
+<version>0.12.6</version>
+</dependency>
+
+
+<dependency>
+<groupId>io.jsonwebtoken</groupId>
+<artifactId>jjwt-impl</artifactId>
+<version>0.12.6</version>
+<scope>runtime</scope>
+</dependency>
+
+
+<dependency>
+
+<groupId>io.jsonwebtoken</groupId>
+<artifactId>jjwt-jackson</artifactId>
+<version>0.12.6</version>
+<scope>runtime</scope>
+
+</dependency>
+
+
+<!-- LOMBOK -->
+
+
+<dependency>
+
+<groupId>org.projectlombok</groupId>
+<artifactId>lombok</artifactId>
+<optional>true</optional>
+
+</dependency>
+
+
+<!-- MAPSTRUCT -->
+
+
+<dependency>
+
+<groupId>org.mapstruct</groupId>
+<artifactId>mapstruct</artifactId>
+<version>${mapstruct.version}</version>
+
+</dependency>
+
+
+<!-- SWAGGER -->
+
+
+<dependency>
+
+<groupId>org.springdoc</groupId>
+<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+<version>2.6.0</version>
+
+</dependency>
+
+
+<!-- TEST -->
+
+
+<dependency>
+
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-test</artifactId>
+<scope>test</scope>
+
+</dependency>
+
+
+</dependencies>
+
+
+
+<build>
+
+<plugins>
+
+
+<plugin>
+
+<groupId>org.springframework.boot</groupId>
+
+<artifactId>spring-boot-maven-plugin</artifactId>
+
+</plugin>
+
+
+</plugins>
+
+
+</build>
+
+
 </project>
